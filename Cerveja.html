@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cerveja em HTML e CSS</title>
+<style>
+    body {
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    .beer {
+        position: relative;
+        width: 140px;
+        height: 260px;
+        border: 6px solid #ccc;
+        border-radius: 0 0 25px 25px;
+        background: transparent;
+        overflow: hidden;
+    }
+
+    /* Líquido */
+    .liquid {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(#f5c542, #e0a800);
+    }
+
+    /* Espuma */
+    .foam {
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    .foam::before,
+    .foam::after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: -15px;
+    }
+
+    .foam::before {
+        left: 10px;
+    }
+
+    .foam::after {
+        right: 10px;
+    }
+
+    /* Brilho do copo */
+    .shine {
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        width: 10px;
+        height: 200px;
+        background: rgba(255,255,255,0.4);
+        border-radius: 10px;
+    }
+
+    /* Base */
+    .base {
+        width: 100px;
+        height: 15px;
+        background: #bbb;
+        margin: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+</style>
+</head>
+<body>
+
+<div>
+    <div class="beer">
+        <div class="foam"></div>
+        <div class="liquid"></div>
+        <div class="shine"></div>
+    </div>
+    <div class="base"></div>
+</div>
+
+</body>
+</html>
